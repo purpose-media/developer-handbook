@@ -9,7 +9,7 @@
         </div>
         <div class="product-item__price">
             @if( $product->display_price )
-                @if( $product->priceRange[0] != $product->priceRange[1] )
+                @if( count( $item->priceRange ) )
                     <span>From</span>
                 @endif
                 {{ Currency::display( $product->display_price ) }}
