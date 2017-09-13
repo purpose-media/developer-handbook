@@ -1,0 +1,25 @@
+ul.pagination {
+	display: block;
+	margin: 40px 0;
+	padding: 0;
+	text-align: center;
+	li {
+		&.disabled {
+			opacity: 0.3;
+			cursor: none;
+		}
+		&.active {
+			background: #dad9d9;
+		}
+		display: inline-block;
+		background: #ececec;
+		margin: 0 3px;
+		span,
+		a, a:visited {
+			text-align: center;
+			display: block;
+			padding:  10px 20px;
+			cursor: pointer;
+		}
+	}
+}
