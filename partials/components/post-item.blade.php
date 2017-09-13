@@ -1,6 +1,6 @@
 <div class="post-item">
     <div class="post-item__image">
-        <img src="{!! route( 'get.media-manager.size', [ 'post-item', $post->mainImageBasename ] ) !!}" alt="" />
+        <img src="{{ route( 'get.media-manager.size', [ 'post-item', $post->mainImageBasename ] ) }}" alt="{{ $post->mainImageAlt }}" />
     </div>
     <div class="post-item__meta">
         <a href="{{ $post->url }}" class="post-item__link">
