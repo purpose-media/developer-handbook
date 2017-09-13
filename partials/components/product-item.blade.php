@@ -1,7 +1,7 @@
 <div class="product-item">
     <a class="product-item__link" href="{{ $product->url }}"></a>
     <div class="product-item__image">
-        <img src="{{ route( 'get.media-manager.size', [ 'product-item', $product->mainImageBasename ] ) }}" alt="{{ $product->name }}" />
+        <img src="{{ route( 'get.media-manager.size', [ 'product-item', $product->mainImageBasename ] ) }}" alt="{{ $product->mainImageAlt }}" />
     </div>
     <div class="product-item__meta">
         <div class="product-item__title">
