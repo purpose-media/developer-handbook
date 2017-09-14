@@ -42,3 +42,25 @@
 		}
 	}
 }
+
+.container {
+	margin: 0 auto;
+	display: block;
+	width: 100%;
+	max-width: 100%;
+	@include breakpoint( phablet ) {
+		width: $max-w__mobile;
+	}
+	@include breakpoint( tablet ) {
+		width: $max-w__phablet;
+	}
+	@include breakpoint( laptop ) {
+		width: $max-w__tablet;
+	}
+	@include breakpoint( large ) {
+		width: $max-w__laptop;
+	}
+	@media( min-width: $max-w__large ) {
+		width: $max-w__large;
+	}
+}
