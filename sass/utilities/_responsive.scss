@@ -1,0 +1,44 @@
+
+@mixin breakpoint( $device ) {
+	@if $device == phablet {
+		@media ( min-width: $max-w__mobile ) {
+			@content;
+		}
+	} @else if $device == tablet {
+		@media ( min-width: $max-w__phablet ) {
+			@content;
+		}
+	} @else if $device == laptop {
+		@media ( min-width: $max-w__tablet ) {
+			@content;
+		}
+	} @else if $device == large {
+		@media ( min-width: $max-w__laptop ) {
+			@content;
+		}
+	}
+}
+
+@mixin breakpoints( $device ) {
+	@if $device == mobile {
+		@media ( min-width: 0 ) and ( max-width: $max-w__mobile ) {
+			@content;
+		}
+	} @else if $device == phablet {
+		@media ( min-width: $max-w__mobile+1 ) and ( max-width: $max-w__phablet ) {
+			@content;
+		}
+	} @else if $device == tablet {
+		@media ( min-width: $max-w__phablet+1 ) and ( max-width: $max-w__tablet ) {
+			@content;
+		}
+	} @else if $device == laptop {
+		@media ( min-width: $max-w__tablet+1 ) and ( max-width: $max-w__laptop ) {
+			@content;
+		}
+	} @else if $device == large {
+		@media ( min-width: $max-w__laptop+1 ) and ( max-width: $max-w__large ) {
+			@content;
+		}
+	}
+}
