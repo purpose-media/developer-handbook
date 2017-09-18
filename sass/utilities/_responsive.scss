@@ -46,6 +46,7 @@
 .container {
 	margin: 0 auto;
 	display: block;
+	padding: 0 1em;
 	width: 100%;
 	max-width: 100%;
 	@include breakpoint( phablet ) {
