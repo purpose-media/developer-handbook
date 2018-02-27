@@ -37,7 +37,7 @@ private function registerWidgets( $app )
 {
     if( $app->bound( Registration::class ) ) {
         $app->booted( function( $app ) {
-            $this->app[ Registration::class ]->addWidget( new LatestNews );
+            $app[ Registration::class ]->addWidget( new LatestNews );
         });
     }
 }
