@@ -1,5 +1,5 @@
 
-# Registration
+# Latest News Registration
 
 ## Front Application
 

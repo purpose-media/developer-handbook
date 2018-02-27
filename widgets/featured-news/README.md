@@ -1,5 +1,5 @@
 
-# CTA Registration
+# Featured News Registration
 
 ## Front Application
 
@@ -8,8 +8,7 @@ Register this method in the Application Service Provider via the boot method (`$
 ```php
 /**
  * @param $app
- * @use Application\Front\Widgets\DoubleCTA
- * @use Application\Front\Widgets\SingleCTA
+ * @use Application\Front\Widgets\FeaturedNews
  * @use Purposemedia\FrontRegions\Libs\Registrar as RegionsRegistrar
  * @return void
  */
@@ -17,8 +16,7 @@ private function registerWidgets( $app )
 {
     if( $app->bound( RegionsRegistrar::class ) ) {
         $app->booted( function( $app ) {
-            $app[ RegionsRegistrar::class ]->registerRenderer( 'widgets.double-cta', new DoubleCTA );
-            $app[ RegionsRegistrar::class ]->registerRenderer( 'widgets.single-cta', new SingleCTA );
+            $app[ RegionsRegistrar::class ]->registerRenderer( 'widgets.featured-news', new FeaturedNews );
         } );
     }
 }
@@ -31,8 +29,7 @@ Register this method in the Application Service Provider via the boot method (`$
 ```php
 /**
  * @param $app
- * @use Application\Back\Widgets\DoubleCTA
- * @use Application\Back\Widgets\SingleCTA
+ * @use Application\Back\Widgets\FeaturedNews
  * @use Purposemedia\AdminRegions\Libs\Registration
  * @return void
  */
@@ -40,8 +37,7 @@ private function registerWidgets( $app )
 {
     if( $app->bound( Registration::class ) ) {
         $app->booted( function( $app ) {
-            $app[ Registration::class ]->addWidget( new DoubleCTA );
-            $app[ Registration::class ]->addWidget( new SingleCTA );
+            $app[ Registration::class ]->addWidget( new FeaturedNews );
         });
     }
 }
